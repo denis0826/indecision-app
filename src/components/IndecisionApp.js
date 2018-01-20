@@ -50,12 +50,15 @@ export default class IndecisionApp extends React.Component {
     } catch (e) {
       // Do nothing at all
     }
+    console.log('componentDidMount fetching data')
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevState.options.length !== this.state.options.length) {
       const json = JSON.stringify(this.state.options);
       localStorage.setItem('options', json);
     }
+    console.log('componentDidUpdate saving data', prevState)
+    console.log('componentDidUpdate saving data', prevProps)
   }
   componentWillUnmount() {
     console.log('componentWillUnmount');

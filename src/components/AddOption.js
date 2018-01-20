@@ -4,6 +4,9 @@ export default class AddOption extends React.Component {
   state = {
     error: undefined
   };
+  componentDidMount() {
+    console.log('componentDidMount test log')
+  }
   handleAddOption = (e) => {
     e.preventDefault();
     const option = e.target.elements.option.value.trim();

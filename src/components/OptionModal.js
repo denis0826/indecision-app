@@ -6,6 +6,7 @@ export default (props) => (
     isOpen={!!props.selectedOption}
     onRequestClose={props.handleCLearSelectedOption}
     contentLabel="Selected Option"
+    ariaHideApp={false}
   >
     <h3>Selected Option</h3>
     {props.selectedOption && <p>{props.selectedOption}</p>}
